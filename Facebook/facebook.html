@@ -12,6 +12,11 @@
 
     <!-- Estilo CSS -->
     <style>
+
+        body {
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
         /* Estilo da Navbar */
         .navbar {
             display: flex;  /* Usa flexbox para alinhar os itens em linha (horizontalmente) */
@@ -38,6 +43,7 @@
             align-items: center;  /* Centraliza verticalmente */
             gap: 10px;  /* Define um espaço de 10px entre os ícones */
         }
+
         .pesquisar-icon {
             /*color: #000000;  /* cor preta para visibilidade */
             font-size: 15px; /* Define o tamanho do ícone */
@@ -76,7 +82,103 @@
         }
 
         .menu {
-            margin-top: 70px; /* Adiciona um espaço abaixo da navbar */
+            text-align: left; /* Alinha tudo à esquerda */
+            padding-left: 0; /* Remove espaçamento lateral */
+            margin-left: -123px;  /* Remove margem */
+            margin-top: 70px;
+        }
+
+        .list-group-item {
+            display: flex;
+            align-items: center;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #050505;
+            cursor: pointer;
+            border-radius: 8px;
+            background: transparent;
+            height: 53px;
+            width: 65%;
+        }
+        .list-group-item a {
+            text-decoration: none; /* Remove o sublinhado */
+            color: inherit; /* Mantém a cor padrão do texto */
+            padding-left: 10px;
+        }
+        .list-group-item:hover {
+            background: #e4e6eb;
+        }
+
+        .profile-icon {
+            color: grey; /* Azul do Facebook */
+            font-size: 35px; /* Tamanho do ícone */
+        }
+        .people-icon {
+            color: #1877F2; /* Azul do Facebook */
+            font-size: 30px; /* Tamanho do ícone */
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .people1-icon {
+            color: #34D1BF;
+            font-size: 25px; /* Tamanho do ícone */
+
+            position: absolute;
+            left: 12px; /* Move o ícone para a direita */
+            top: 4px; /* Move o ícone para baixo */
+        }
+
+        .icon-container {
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+
+        .recuerdos-icon{
+            color: #1877F2;
+            font-size: 25px;
+        }
+        .guardado-icon {
+            font-size: 25px; /* Ajusta o tamanho */
+            background: linear-gradient(to bottom, #E1306C, #906DFB); /* Gradiente rosa para roxo */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Faz o texto pegar o gradiente */
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+            transform: scaleY(1.2); /* Estica verticalmente */
+        }
+
+
+        .icon-container2 {
+            position: relative;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(to bottom, #0099FF, #0066FF); /* Cor de fundo do ícone */
+            border-radius: 50%; /* Deixa o fundo arredondado */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .grupo1{
+            font-size: 18px; /* Tamanho do ícone */
+            left: 15px;
+            top: 8px;
+        }
+        .grupo2{
+            font-size: 21px; /* Tamanho do ícone */
+            left: 8px;
+            top: 10px;
+        }
+        .grupo3{
+            font-size: 24px; /* Tamanho do ícone */
+            position: absolute;
+            left: 5px;
+            top: 0;
         }
     </style>
 </head>
@@ -109,24 +211,68 @@
     </div>
 </nav>
 
-<div class="container mt-5 menu"  >
+<div class="container "  >
     <div class="row">
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Menu
+        <div class="col-md-4" >
+            <div class="container-fluid" style="margin-top: 25px">
+                <div class="menu ">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item ">
+                                <i class="bi bi-person-circle profile-icon"></i> <a href="">Nome</a>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="icon-container">
+                                    <i class="bi bi-person-fill people1-icon"></i><i class="bi bi-person-fill people-icon"></i>
+                                </div>
+                                <a href="">Amigos</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-clock-history recuerdos-icon"></i><a href="">Recuerdos</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-bookmark-fill guardado-icon "></i><a href="">Guardado</a>
+                            </li>
+
+                            <li class="list-group-item">
+                                <div style="color: white" class="icon-container2">
+                                    <i class="bi bi-person-fill grupo1"></i><i class="bi bi-person-fill grupo2"></i><i class="bi bi-person-fill grupo3"></i>
+                                </div>
+                                <a href="">Grupos</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="">Video</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="">Marketplace</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="">Feeds</a>
+                            </li>
+
+                            <li class="list-group-item">
+                                <a href="">Eventos</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="">Administrador de anuncios</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="">Respuesta ante emergencias</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="">Ver mais</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
+
         </div>
 
         <div class="col-md-4">
-        </div>
-
-        <div>
-            <h1>teste 4hyhettnunu4</h1>
         </div>
     </div>
 </div>
